@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Meenal Shendre – AI &amp; Data Science Portfolio</title>
+<meta name="description" content="Meenal Shendre, B.Tech AI &amp; Data Science student at VIT Pune. Machine learning, IoT and NLP projects.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F2F5F7; --surface:#FFFFFF; --ink:#16233B; --muted:#5A667C; --line:#D5DCE4;
+  --accent:#0B8F82; --accent-ink:#FFFFFF; --soft:#9AA6B8;
+  --head:"Bricolage Grotesque","Trebuchet MS",system-ui,sans-serif;
+  --body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1726; --surface:#17223A; --ink:#E8EEF7; --muted:#9FADC4; --line:#2A3752;
+    --accent:#3CCBB8; --accent-ink:#06211D; --soft:#6B7A94; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1726; --surface:#17223A; --ink:#E8EEF7; --muted:#9FADC4; --line:#2A3752;
+  --accent:#3CCBB8; --accent-ink:#06211D; --soft:#6B7A94; color-scheme:dark;
+}
+*{box-sizing:border-box}
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0;gap:16px;flex-wrap:wrap}
+nav .name{font-family:var(--head);font-weight:800;font-size:1.15rem;text-decoration:none}
+nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;font-size:.95rem}
+nav ul a{text-decoration:none;color:var(--muted)}
+nav ul a:hover{color:var(--ink)}
+.hero{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center;padding:56px 0 72px}
+h1{font-family:var(--head);font-weight:800;font-size:clamp(2.4rem,6vw,4.1rem);line-height:1.04;margin:0 0 20px;letter-spacing:-.02em}
+.lede{font-size:1.15rem;color:var(--muted);max-width:34em;margin:0 0 28px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 22px;border-radius:999px;font-weight:500;text-decoration:none;border:1.5px solid var(--ink)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn:hover{transform:translateY(-1px)}
+figure{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:20px 20px 14px}
+figure svg{width:100%;height:auto;display:block}
+figcaption{font-size:.85rem;color:var(--muted);margin-top:8px}
+.key{display:flex;gap:18px;font-size:.85rem;margin-bottom:6px;flex-wrap:wrap}
+.key span::before{content:"";display:inline-block;width:18px;height:3px;margin-right:7px;vertical-align:middle;background:var(--soft)}
+.key span.p::before{background:var(--accent)}
+.draw{stroke-dasharray:1400;stroke-dashoffset:1400;animation:draw 2.6s ease-out .3s forwards}
+.draw.b{animation-delay:1s}
+@keyframes draw{to{stroke-dashoffset:0}}
+@media (prefers-reduced-motion:reduce){.draw{animation:none;stroke-dashoffset:0}html{scroll-behavior:auto}}
+section{padding:56px 0;border-top:1px solid var(--line)}
+h2{font-family:var(--head);font-weight:700;font-size:1.9rem;margin:0 0 28px;letter-spacing:-.01em}
+.proj{display:grid;grid-template-columns:150px 1fr;gap:12px 32px;padding:28px 0;border-bottom:1px solid var(--line)}
+.proj:first-of-type{padding-top:0}
+.proj:last-of-type{border-bottom:0}
+.date{color:var(--muted);font-size:.95rem}
+h3{font-family:var(--head);font-size:1.3rem;margin:0 0 10px;line-height:1.25}
+.proj ul{margin:0 0 14px;padding-left:1.1em}
+.proj li{margin-bottom:6px;max-width:62ch}
+.tags{display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:0;list-style:none}
+.tags li{font-size:.85rem;padding:3px 12px;border-radius:999px;background:var(--surface);border:1px solid var(--line);margin:0}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+dl{margin:0}
+dt{font-weight:500}
+dd{margin:0 0 16px;color:var(--muted)}
+.skills div{display:grid;grid-template-columns:170px 1fr;gap:4px 16px;padding:10px 0;border-bottom:1px solid var(--line)}
+.skills div:last-child{border-bottom:0}
+.skills b{font-weight:500}
+.skills span{color:var(--muted)}
+.certs{list-style:none;padding:0;margin:0}
+.certs li{padding:10px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:16px}
+.certs li:last-child{border-bottom:0}
+.certs em{font-style:normal;color:var(--muted);white-space:nowrap}
+.contact{font-family:var(--head);font-size:clamp(1.4rem,4vw,2.2rem);font-weight:700;line-height:1.3}
+.contact a{color:var(--accent)}
+footer{padding:32px 0 40px;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
+@media (max-width:760px){
+  .hero,.two{grid-template-columns:1fr;gap:32px}
+  .proj{grid-template-columns:1fr}
+  .skills div{grid-template-columns:1fr}
+  .certs li{flex-direction:column;gap:0}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav aria-label="Main">
+    <a class="name" href="#top">Meenal Shendre</a>
+    <ul>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero" id="top">
+    <div>
+      <h1>I build machine learning systems that make networks and devices smarter.</h1>
+      <p class="lede">B.Tech student in Artificial Intelligence and Data Science at Vishwakarma Institute of Technology, Pune. I work across ML, IoT and NLP, from congestion prediction to voice translation.</p>
+      <div class="btns">
+        <a class="btn primary" href="#projects">See my projects</a>
+        <a class="btn" href="mailto:meenal.shendre17@gmail.com">Email me</a>
+      </div>
+    </div>
+    <figure>
+      <div class="key"><span>Reactive TCP</span><span class="p">Predictive (AI-assisted)</span></div>
+      <svg viewBox="0 0 400 220" role="img" aria-label="Illustration of congestion window over time. Reactive TCP drops sharply on packet loss, while the predictive controller adjusts early and stays steadier.">
+        <g stroke="var(--line)" stroke-width="1">
+          <line x1="30" y1="190" x2="390" y2="190"/><line x1="30" y1="190" x2="30" y2="15"/>
+        </g>
+        <path class="draw" fill="none" stroke="var(--soft)" stroke-width="2.5" stroke-linejoin="round"
+          d="M30 170 L110 60 L112 125 L170 60 L172 125 L230 60 L232 125 L290 60 L292 125 L350 60 L352 125 L385 95"/>
+        <path class="draw b" fill="none" stroke="var(--accent)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"
+          d="M30 170 C70 120 90 85 120 80 C150 78 160 92 185 90 C215 88 240 76 270 78 C310 80 340 72 385 70"/>
+        <text x="34" y="208" font-size="11" fill="var(--muted)" font-family="IBM Plex Sans, sans-serif">time</text>
+        <text x="6" y="14" font-size="11" fill="var(--muted)" font-family="IBM Plex Sans, sans-serif">cwnd</text>
+      </svg>
+      <figcaption>Illustration of the idea behind my congestion control project: adapt before packets are lost.</figcaption>
+    </figure>
+  </header>
+
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <article class="proj">
+      <div class="date">March 2026</div>
+      <div>
+        <h3>AI-IoT Assisted Predictive Congestion Control Protocol</h3>
+        <ul>
+          <li>Predicts network congestion from RTT, packet loss, throughput and queue load.</li>
+          <li>Random Forest decision engine estimates congestion risk and adapts the TCP congestion window (cwnd) for better stability.</li>
+          <li>Network simulation and visualizations of cwnd, RTT, throughput and queue behavior.</li>
+        </ul>
+        <ul class="tags"><li>Python</li><li>Machine Learning</li><li>Network Simulation</li><li>Scikit-Learn</li><li>Matplotlib</li><li>CSV Telemetry</li></ul>
+      </div>
+    </article>
+
+    <article class="proj">
+      <div class="date">November 2025</div>
+      <div>
+        <h3>RFID-Based Smart Attendance System with Firebase Cloud Backend</h3>
+        <ul>
+          <li>IoT attendance system using RFID authentication and an ESP32 to record and verify identity automatically.</li>
+          <li>Firebase Realtime Database logs attendance live, with central storage and remote monitoring.</li>
+          <li>Low-cost design that removes manual entry and improves accuracy and scalability.</li>
+        </ul>
+        <ul class="tags"><li>ESP32</li><li>RFID (MFRC522)</li><li>Firebase Realtime Database</li><li>IoT</li></ul>
+      </div>
+    </article>
+
+    <article class="proj">
+      <div class="date">April 2025</div>
+      <div>
+        <h3>AI Voice Assistant with Language Translation</h3>
+        <ul>
+          <li>Voice assistant with speech recognition and multilingual translation using PyTorch-based models.</li>
+          <li>Pipeline of speech-to-text, translation and text-to-speech that returns translated audio.</li>
+          <li>Gradio interface: speak in, hear the translation in real time.</li>
+        </ul>
+        <ul class="tags"><li>Python</li><li>PyTorch</li><li>SpeechRecognition</li><li>gTTS</li><li>Gradio</li></ul>
+      </div>
+    </article>
+
+    <article class="proj">
+      <div class="date">2025</div>
+      <div>
+        <h3>DIY Ventilator Using Arduino</h3>
+        <p style="margin:0;max-width:62ch">Co-inventor. Patent filed and published.</p>
+      </div>
+    </article>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div><b>Languages</b><span>C, C++, Java, Python, SQL</span></div>
+      <div><b>Core CS</b><span>Data structures and algorithms, OOP, DBMS</span></div>
+      <div><b>Web</b><span>HTML, CSS, JavaScript</span></div>
+      <div><b>Databases</b><span>MySQL, MongoDB</span></div>
+      <div><b>Tools</b><span>Visual Studio, Google Colab, Zoho Analytics</span></div>
+      <div><b>Design</b><span>Figma, Canva</span></div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="two">
+      <div>
+        <h2>Education</h2>
+        <dl>
+          <dt>B.Tech, Artificial Intelligence and Data Science</dt>
+          <dd>Vishwakarma Institute of Technology, Pune<br>CGPA 8.85/10 (ongoing)</dd>
+          <dt>Higher Secondary (HSC), 2024</dt>
+          <dd>St. Paul Junior College, Nagpur<br>78.17%</dd>
+          <dt>Secondary (SSC), 2022</dt>
+          <dd>The Swaminarayan School, Nagpur<br>93.80%</dd>
+        </dl>
+      </div>
+      <div>
+        <h2>Certifications</h2>
+        <ul class="certs">
+          <li>Application of Anomaly Detection · NVIDIA DLI <em>2026</em></li>
+          <li>Building Transformer-Based NLP Applications · NVIDIA DLI <em>2026</em></li>
+          <li>Building LLM Applications With Prompt Engineering · NVIDIA DLI <em>2026</em></li>
+          <li>Generative AI with Diffusion Models · NVIDIA DLI <em>2026</em></li>
+          <li>Introduction to Copilot for Startups · Microsoft <em>2025</em></li>
+          <li>Advanced Software Engineering Job Simulation · Walmart <em>2025</em></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p class="contact">Open to internships and entry-level roles.<br>
+      <a href="mailto:meenal.shendre17@gmail.com">meenal.shendre17@gmail.com</a><br>
+      <a href="tel:+918600840620">+91 8600840620</a></p>
+  </section>
+
+  <footer>Meenal Shendre · Pune, Maharashtra, India</footer>
+</div>
+</body>
+</html>
